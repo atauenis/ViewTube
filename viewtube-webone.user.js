@@ -1,12 +1,12 @@
 // ==UserScript==
-// @name		ViewTube
-// @version		2019.12.05-AT-1
+// @name		ViewTube + WebOne
+// @version		2019.12.05-AT-2
 // @description		Watch videos from video sharing websites with extra options.
 // @author		sebaro
 // @namespace		http://sebaro.pro/viewtube
-// @downloadURL		https://gitlab.com/sebaro/viewtube/raw/master/viewtube.user.js
-// @updateURL		https://gitlab.com/sebaro/viewtube/raw/master/viewtube.user.js
-// @icon		https://gitlab.com/sebaro/viewtube/raw/master/viewtube.png
+// @downloadURL		https://github.com/atauenis/ViewTube-WebOne/raw/master/viewtube-webone.user.js
+// @updateURL		https://github.com/atauenis/ViewTube-WebOne/raw/master/viewtube-webone.user.js
+// @icon		https://github.com/atauenis/ViewTube-WebOne/raw/master/viewtube.png
 // @include		http://youtube.com*
 // @include		http://www.youtube.com*
 // @include		https://youtube.com*
@@ -48,6 +48,7 @@
 /*
 
   Copyright (C) 2010 - 2019 Sebastian Luncan
+  Patches: (C) 2019 Alexander Tauenis
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -65,6 +66,8 @@
   Website: http://sebaro.pro/viewtube
   Contact: http://sebaro.pro/contact
 
+  Patches website: https://github.com/atauenis/ViewTube-WebOne
+
 */
 
 
@@ -79,8 +82,8 @@ if (window.top != window.self) return;
 
 // Userscript
 var userscript = 'ViewTube';
-var website = 'http://sebaro.pro/viewtube';
-var contact = 'http://sebaro.pro/contact';
+var website = 'https://github.com/atauenis/ViewTube-WebOne';
+var contact = 'https://github.com/atauenis/ViewTube-WebOne';
 
 // Page
 var page = {win: window, doc: window.document, body: window.document.body, url: window.location.href, site: window.location.hostname.match(/([^.]+)\.[^.]+$/)[1]};
