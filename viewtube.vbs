@@ -1,6 +1,6 @@
 exe = "C:\Progra~1\VideoLAN\VLC\vlc.exe" 'Player name
 str1 = "http://PROXYHOST/!convert/?url=" 'Enter valid IP or hostname of the proxy
-str2 = "&util=avconv&arg=-vcodec%20wmv1%20-acodec%20wmav1%20-f%20asf&type=video/avi"
+str2 = "&util=ffmpeg&arg=-vcodec%20wmv1%20-acodec%20wmav1%20-f%20asf&type=video/avi"
 str = Replace(WScript.Arguments.Item(0), "viewtube:", "")
 str = Replace(str, "://", "%3A%2F%2F")
 str = Replace(str, "/", "%2F")
