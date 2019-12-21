@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name		ViewTube + WebOne
-// @version		2019.12.05-AT-2
+// @name		ViewTube with WebOne support
+// @version		2019.12.05-AT-3
 // @description		Watch videos from video sharing websites with extra options.
-// @author		sebaro
+// @author		sebaro + ATauenis
 // @namespace		http://sebaro.pro/viewtube
 // @downloadURL		https://github.com/atauenis/ViewTube-WebOne/raw/master/viewtube-webone.user.js
 // @updateURL		https://github.com/atauenis/ViewTube-WebOne/raw/master/viewtube-webone.user.js
@@ -127,7 +127,7 @@ for (var mediakey in mediatypes) {
 // Proxy server options
 var proxyobject = {
 	containers: {
-		//'MP4': ' -f mp4', //don't work in avconv 11.3
+		//'MP4': ' -f mp4', //causes error: [mp4 @ 0650c8c0] muxer does not support non seekable output
 		'MTS': ' -f mpegts', 
 		'AVI': ' -f avi', 
 		'ASF': '  -f asf', 
@@ -199,7 +199,7 @@ function GetAvcURL(VideoUrl){
 
 	//make proxy and source URL
 	var avcUrl = 'http://' + option['avcWebOneHost'] + '/!convert/?url=';
-	avcUrl += encodeURIComponent(avcSrcUrl) + '&util=avconv&arg=';
+	avcUrl += encodeURIComponent(avcSrcUrl) + '&util=ffmpeg&arg=';
 
 	//make parameters
 	var avcArgs = option['avcVCodec']

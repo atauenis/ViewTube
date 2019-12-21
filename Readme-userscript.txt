@@ -3,7 +3,7 @@ ViewTube-webone
 viewtube-webone.user.js
 
 
-This is a patched version of ViewTube user script that utilize WebOne 0.9.2+
+This is a patched version of ViewTube user script that utilize WebOne
 to convert YouTube videos into particular formats (containers) and codecs.
 
 It can be used to download ready to play on older computers versions of videos
@@ -21,7 +21,7 @@ viewtube-webone.user.js
 System requirements:
 * Firefox 3.5+, Opera 11.64+, or Google Chrome
 * Greasemonkey or Tampermonkey add-on (except on Opera Presto)
-* WebOne proxy server running on another PC with avconv
+* WebOne 0.9.2+ proxy server running on another PC with FFmpeg
 
 On all browsers it's need to install Greasemonkey or Tampermonkey add-ons.
 The only exception is Opera 11/12, where the user script can work without
@@ -63,7 +63,7 @@ The long row is related to codec conversion. It containing:
 * video codec (may be set to "original" to do not touch the video stream);
 * video resolution;
 * video bitrate (you may use "K" and "M" to shorten "kb/s" and "mb/s" here or
-  leave "max" or empty to let AVconv set the bitrate);
+  leave "max" or empty to let FFmpeg set the bitrate);
 * audio codec (may be set to to "original" to don't touch the audio stream);
 * audio channels;
 * audio bitrate (similar to video bitrate).
