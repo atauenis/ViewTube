@@ -9,7 +9,7 @@ System requirements:
 * MS Windows with WSH 5.x (XP SP3 is okay)
 * A browser with ViewTube userscript (http://sebaro.pro/viewtube/)
 * VLC Media Player (or other streaming video player)
-* WebOne proxy server running on another PC with avconv
+* WebOne proxy server running on another PC with FFmpeg
 
 This script does not needs to WebOne be set as default HTTP proxy server on
 client PC.
@@ -22,7 +22,7 @@ Step 4. (Re-)Start browser, open YouTube and select "Protocol" player
         in ViewTube frame. Also choose resolution (SD/HD/FHD/4K).
 Step 5. Click "Play" button.
 Step 6. VLC Media Player should appear and open the video file via
-        WebOne which will convert it via avconv to Windows Media Video format.
+        WebOne which will convert it via FFmpeg to Windows Media Video format.
 
 Configuration:
 - To change path of this script, edit viewtube.reg and re-import it.
@@ -32,11 +32,11 @@ Configuration:
   3rd line of it (&arg=-vcodec%20wmv1%20-acodec%20wmav1%20-f%20asf).
   See AVConv docs for arugments. Note that these arguments must be
   URL-encoded.
-- To change path to avconv.exe edit "&util=path/to/avconv" to need, then
+- To change path to FFmpeg.exe edit "&util=path/to/FFmpeg.exe" to need, then
   edit proxy's webone.conf [Converters] section and verify that
-  it contains a valid row like: "path/to/avconv -i pipe: %ARG1% pipe:"
+  it contains a valid row like: "path/to/FFmpeg -i pipe: %ARG1% pipe:"
  
-List of available codecs and formats can be get through running avconv.exe
+List of available codecs and formats can be get through running FFmpeg.exe
 on proxy machine with "-codecs" and "-formats" arguments.
 
 Uninstallation:
